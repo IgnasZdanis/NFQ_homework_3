@@ -61,7 +61,7 @@ class Category
     private $title;
 
     /**
-     * @ORM\OneToMany(targetEntity="Product", mappedBy="category")
+     * @ORM\OneToMany(targetEntity="Product", mappedBy="category", cascade={"persist"})
      */
     private $products;
 
