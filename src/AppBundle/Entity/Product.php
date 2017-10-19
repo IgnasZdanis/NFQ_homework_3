@@ -23,33 +23,21 @@ class Product
      */
     private $id;
 
-    /**
-     * @return mixed
-     */
     public function getId()
     {
         return $this->id;
     }
 
-    /**
-     * @param mixed $id
-     */
     public function setId($id)
     {
         $this->id = $id;
     }
 
-    /**
-     * @return mixed
-     */
     public function getTitle()
     {
         return $this->title;
     }
 
-    /**
-     * @param mixed $title
-     */
     public function setTitle($title)
     {
         $this->title = $title;
@@ -71,33 +59,21 @@ class Product
         $this->price = $price;
     }
 
-    /**
-     * @return mixed
-     */
     public function getCategory()
     {
         return $this->category;
     }
 
-    /**
-     * @param mixed $category_id
-     */
     public function setCategory($category)
     {
         $this->category = $category;
     }
 
-    /**
-     * @return mixed
-     */
     public function getActive()
     {
         return $this->active;
     }
 
-    /**
-     * @param mixed $active
-     */
     public function setActive($active)
     {
         $this->active = $active;
