@@ -74,17 +74,17 @@ class Product
     /**
      * @return mixed
      */
-    public function getCategoryId()
+    public function getCategory()
     {
-        return $this->category_id;
+        return $this->category;
     }
 
     /**
      * @param mixed $category_id
      */
-    public function setCategoryId($category_id)
+    public function setCategory($category)
     {
-        $this->category_id = $category_id;
+        $this->category = $category;
     }
 
     /**
@@ -111,9 +111,10 @@ class Product
      */
     private $price;
     /**
-     * @ORM\Column(name="category_id", type="integer")
+     * @ORM\ManyToOne(targetEntity="Category", inversedBy="products")
+     * @ORM\JoinColumn(name="category_id", referencedColumnName="id", nullable=FALSE)
      */
-    private $category_id;
+    private $category;
     /**
      * @ORM\Column(name="active", type="boolean")
      */

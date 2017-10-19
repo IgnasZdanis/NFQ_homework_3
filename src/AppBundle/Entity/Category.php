@@ -56,7 +56,28 @@ class Category
         $this->title = $title;
     }
     /**
-     * @ORM\Column(name="title", type="string", length="255")
+     * @ORM\Column(name="title", type="string", length=255)
      */
     private $title;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Product", mappedBy="category")
+     */
+    private $products;
+
+    /**
+     * @return mixed
+     */
+    public function getProducts()
+    {
+        return $this->products;
+    }
+
+    /**
+     * @param mixed $products
+     */
+    public function setProducts($products)
+    {
+        $this->products = $products;
+    }
 }
